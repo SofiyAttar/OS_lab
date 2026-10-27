@@ -1,0 +1,76 @@
+--- a/vm.c
++++ b/vm.c
+@@ -54,6 +54,59 @@
+   return &pgtab[PTX(va)];
+ }
+ 
++/*
++ * Assignment 9, Q1:
++ * Print all valid user-page mappings for a process.
++ * Also report the number of mapped user pages and
++ * the number of page-table pages used by those mappings.
++ */
++void
++vmprint(pde_t *pgdir, uint sz)
++{
++  uint va;
++  uint pages = 0;
++  uint pagetables = 0;
++  uint last_pdx = NPDENTRIES;
++  pde_t *pde;
++  pte_t *pte;
++
++  cprintf("\nVA          PA          P W U\n");
++
++  // Traverse user virtual addresses only.
++  for(va = 0; va < sz && va < KERNBASE; va += PGSIZE){
++    pde = &pgdir[PDX(va)];
++
++    // Ignore missing page-directory entries.
++    if((*pde & PTE_P) == 0)
++      continue;
++
++    pte = walkpgdir(pgdir, (char*)va, 0);
++
++    // Ignore missing or invalid page-table entries.
++    if(pte == 0 || (*pte & PTE_P) == 0)
++      continue;
++
++    cprintf("0x%x 0x%x  %d %d %d\n",
++            va,
++            PTE_ADDR(*pte),
++            (*pte & PTE_P) != 0,
++            (*pte & PTE_W) != 0,
++            (*pte & PTE_U) != 0);
++
++    pages++;
++
++    // Count each page-table page once.
++    if(PDX(va) != last_pdx){
++      pagetables++;
++      last_pdx = PDX(va);
++    }
++  }
++
++  cprintf("Total valid user pages: %d\n", pages);
++  cprintf("Page-table pages used: %d\n", pagetables);
++}
++
++
+ // Create PTEs for virtual addresses starting at va that refer to
+ // physical addresses starting at pa. va and size might not
+ // be page-aligned.
+@@ -391,4 +444,13 @@
+ // Blank page.
+ //PAGEBREAK!
+ // Blank page.
++// Assignment 9 Q1: System-call handler for vmprint.
++int
++sys_vmprint(void)
++{
++  struct proc *p = myproc();
++
++  vmprint(p->pgdir, p->sz);
++  return 0;
++}
+ 

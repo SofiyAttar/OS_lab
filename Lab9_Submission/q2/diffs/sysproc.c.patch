@@ -1,0 +1,50 @@
+--- a/sysproc.c
++++ b/sysproc.c
+@@ -41,21 +41,32 @@
+ {
+   return myproc()->pid;
+ }
+-
++// Assignment 9 Q2: Lazy allocation of user memory.
+ int
+ sys_sbrk(void)
+ {
+   int addr;
+   int n;
++  struct proc *curproc = myproc();
+ 
+   if(argint(0, &n) < 0)
+     return -1;
+-  addr = myproc()->sz;
+-  if(growproc(n) < 0)
+-    return -1;
++
++  addr = curproc->sz;
++
++  if(n > 0){
++    // Reserve virtual address space without allocating pages.
++    if(addr + n >= KERNBASE)
++      return -1;
++    curproc->sz += n;
++  } else if(n < 0){
++    // Preserve normal shrinking behaviour.
++    if(growproc(n) < 0)
++      return -1;
++  }
++
+   return addr;
+ }
+-
+ int
+ sys_sleep(void)
+ {
+@@ -89,3 +100,9 @@
+   release(&tickslock);
+   return xticks;
+ }
++// Assignment 9 Q2: Return the current process's page-fault count.
++int
++sys_getfaults(void)
++{
++  return myproc()->pagefaults;
++}

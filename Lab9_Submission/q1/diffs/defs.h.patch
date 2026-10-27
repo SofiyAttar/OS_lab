@@ -1,0 +1,13 @@
+--- a/defs.h
++++ b/defs.h
+@@ -185,6 +185,10 @@
+ void            switchkvm(void);
+ int             copyout(pde_t*, uint, void*, uint);
+ void            clearpteu(pde_t *pgdir, char *uva);
++/* Assignment 9 Q1: Page-table printing */
++void            vmprint(pde_t *pgdir, uint sz);
++int             sys_vmprint(void);
++
+ 
+ // number of elements in fixed-size array
+ #define NELEM(x) (sizeof(x)/sizeof((x)[0]))

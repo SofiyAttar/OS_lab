@@ -1,0 +1,8 @@
+--- a/usys.S
++++ b/usys.S
+@@ -31,3 +31,5 @@
+ SYSCALL(uptime)
+ # Assignment 9 Q1
+ SYSCALL(vmprint)
++# Assignment 9 Q2
++SYSCALL(getfaults)

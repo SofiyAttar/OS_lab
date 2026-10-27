@@ -1,0 +1,41 @@
+--- a/trap.c
++++ b/trap.c
+@@ -47,6 +47,33 @@
+   }
+ 
+   switch(tf->trapno){
++    // Assignment 9 Q2: Handle lazy-allocation page faults.
++    // Assignment 9 Q2: Handle lazy-allocation page faults.
++  case T_PGFLT: {
++    uint faultaddr;
++    struct proc *p = myproc();
++
++    faultaddr = rcr2();
++
++    // Reject faults outside the process's reserved user memory.
++    if(p == 0 || faultaddr >= p->sz || faultaddr >= KERNBASE){
++      if(p)
++        p->killed = 1;
++      else
++        panic("page fault without process");
++      break;
++    }
++
++    // Allocate and map the missing page.
++    if(alloclazy(p->pgdir, faultaddr) < 0){
++      p->killed = 1;
++      break;
++    }
++
++    // Count only successfully handled lazy page faults.
++    p->pagefaults++;
++    break;
++  }
+   case T_IRQ0 + IRQ_TIMER:
+     if(cpuid() == 0){
+       acquire(&tickslock);
+@@ -110,3 +137,4 @@
+   if(myproc() && myproc()->killed && (tf->cs&3) == DPL_USER)
+     exit();
+ }
++

@@ -1,0 +1,64 @@
+--- a/vm.c
++++ b/vm.c
+@@ -375,28 +375,34 @@
+ 
+   if((d = setupkvm()) == 0)
+     return 0;
++
+   for(i = 0; i < sz; i += PGSIZE){
++    // Assignment 9 Q2: Skip pages not yet allocated.
+     if((pte = walkpgdir(pgdir, (void *) i, 0)) == 0)
+-      panic("copyuvm: pte should exist");
++      continue;
+     if(!(*pte & PTE_P))
+-      panic("copyuvm: page not present");
++      continue;
++
+     pa = PTE_ADDR(*pte);
+     flags = PTE_FLAGS(*pte);
++
+     if((mem = kalloc()) == 0)
+       goto bad;
++
+     memmove(mem, (char*)P2V(pa), PGSIZE);
++
+     if(mappages(d, (void*)i, PGSIZE, V2P(mem), flags) < 0) {
+       kfree(mem);
+       goto bad;
+     }
+   }
++
+   return d;
+ 
+ bad:
+   freevm(d);
+   return 0;
+ }
+-
+ //PAGEBREAK!
+ // Map user virtual address to kernel address.
+ char*
+@@ -453,4 +459,23 @@
+   vmprint(p->pgdir, p->sz);
+   return 0;
+ }
++// Assignment 9 Q2: Allocate and map a lazy page.
++int
++alloclazy(pde_t *pgdir, uint va)
++{
++  char *mem;
++
++  mem = kalloc();
++  if(mem == 0)
++    return -1;
++
++  memset(mem, 0, PGSIZE);
++
++  if(mappages(pgdir, (char*)PGROUNDDOWN(va),
++              PGSIZE, V2P(mem), PTE_W | PTE_U) < 0){
++    kfree(mem);
++    return -1;
++  }
+ 
++  return 0;
++}

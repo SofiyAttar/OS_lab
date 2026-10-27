@@ -1,0 +1,10 @@
+--- a/Makefile
++++ b/Makefile
+@@ -184,6 +184,7 @@
+ 	_mytest\
+ 	_pttest\
+ 	_lazytest\
++	_paging_sim\
+ 
+ fs.img: mkfs README $(UPROGS)
+ 	./mkfs fs.img README $(UPROGS)

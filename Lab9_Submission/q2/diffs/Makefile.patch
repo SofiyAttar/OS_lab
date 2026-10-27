@@ -1,0 +1,10 @@
+--- a/Makefile
++++ b/Makefile
+@@ -183,6 +183,7 @@
+ 	_zombie\
+ 	_mytest\
+ 	_pttest\
++	_lazytest\
+ 
+ fs.img: mkfs README $(UPROGS)
+ 	./mkfs fs.img README $(UPROGS)

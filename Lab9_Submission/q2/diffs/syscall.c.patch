@@ -1,0 +1,21 @@
+--- a/syscall.c
++++ b/syscall.c
+@@ -105,6 +105,8 @@
+ extern int sys_uptime(void);
+ // Assignment 9 Q1
+ extern int sys_vmprint(void);
++// Assignment 9 Q2
++extern int sys_getfaults(void);
+ 
+ static int (*syscalls[])(void) = {
+ [SYS_fork]    sys_fork,
+@@ -130,6 +132,9 @@
+ [SYS_close]   sys_close,
+ // Assignment 9 Q1
+ [SYS_vmprint] sys_vmprint,
++// Assignment 9 Q2
++[SYS_getfaults] sys_getfaults,
++
+ };
+ 
+ void

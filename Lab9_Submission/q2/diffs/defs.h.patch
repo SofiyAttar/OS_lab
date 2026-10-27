@@ -1,0 +1,11 @@
+--- a/defs.h
++++ b/defs.h
+@@ -189,6 +189,8 @@
+ void            vmprint(pde_t *pgdir, uint sz);
+ int             sys_vmprint(void);
+ 
++int             alloclazy(pde_t *pgdir, uint va);
++
+ 
+ // number of elements in fixed-size array
+ #define NELEM(x) (sizeof(x)/sizeof((x)[0]))
