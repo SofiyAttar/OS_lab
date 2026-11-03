@@ -1,0 +1,22 @@
+--- a/defs.h
++++ b/defs.h
+@@ -161,6 +161,9 @@
+ int             sys_memstats(void);
+ // Assignment 10 Q2: Virtual-to-physical translation system call.
+ int             sys_vtop(void);
++// Assignment 10 Q3: Page management system calls.
++int             sys_pageinfo(void);
++int             sys_setreadonly(void);
+ 
+ // timer.c
+ void            timerinit(void);
+@@ -193,6 +196,9 @@
+ void            clearpteu(pde_t *pgdir, char *uva);
+ // Assignment 10 Q2: Virtual-to-physical translation.
+ uint            vtop(pde_t*, uint);
++// Assignment 10 Q3: Page information and protection.
++int             pageinfo(pde_t*, uint);
++int             setreadonly(pde_t*, uint);
+ 
+ // number of elements in fixed-size array
+ #define NELEM(x) (sizeof(x)/sizeof((x)[0]))

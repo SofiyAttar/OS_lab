@@ -1,0 +1,11 @@
+--- a/user.h
++++ b/user.h
+@@ -25,6 +25,8 @@
+ int uptime(void);
+ // Assignment 10 Q1
+ int memstats(void);
++// Assignment 10 Q2
++int vtop(int);
+ 
+ // ulib.c
+ int stat(const char*, struct stat*);

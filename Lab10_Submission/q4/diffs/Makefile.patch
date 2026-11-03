@@ -1,0 +1,10 @@
+--- a/Makefile
++++ b/Makefile
+@@ -185,6 +185,7 @@
+ 	_memtest\
+ 	_vttest\
+ 	_pagetest\
++	_pagereplace\
+ 
+ fs.img: mkfs README $(UPROGS)
+ 	./mkfs fs.img README $(UPROGS)

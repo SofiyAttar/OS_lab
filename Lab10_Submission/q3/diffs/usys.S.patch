@@ -1,0 +1,9 @@
+--- a/usys.S
++++ b/usys.S
+@@ -33,3 +33,6 @@
+ SYSCALL(memstats)
+ # Assignment 10 Q2
+ SYSCALL(vtop)
++# Assignment 10 Q3
++SYSCALL(pageinfo)
++SYSCALL(setreadonly)

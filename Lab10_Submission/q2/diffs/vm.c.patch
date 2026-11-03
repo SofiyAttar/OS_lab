@@ -1,0 +1,32 @@
+--- a/vm.c
++++ b/vm.c
+@@ -384,7 +384,29 @@
+   }
+   return 0;
+ }
++// Assignment 10 Q2: Translate a virtual address to a physical address.
++uint
++vtop(pde_t *pgdir, uint va)
++{
++  pte_t *pte;
++  uint pa;
+ 
++  // Reject addresses outside the user address space.
++  if(va >= KERNBASE)
++    return 0;
++
++  // Locate the page-table entry without allocating a page table.
++  pte = walkpgdir(pgdir, (char*)va, 0);
++
++  // Check whether the page-table entry exists and is present.
++  if(pte == 0 || !(*pte & PTE_P))
++    return 0;
++
++  // Extract physical frame address and combine with page offset.
++  pa = PTE_ADDR(*pte) | (va & (PGSIZE - 1));
++
++  return pa;
++}
+ //PAGEBREAK!
+ // Blank page.
+ //PAGEBREAK!

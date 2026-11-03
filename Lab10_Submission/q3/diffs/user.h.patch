@@ -1,0 +1,12 @@
+--- a/user.h
++++ b/user.h
+@@ -27,6 +27,9 @@
+ int memstats(void);
+ // Assignment 10 Q2
+ int vtop(int);
++// Assignment 10 Q3
++int pageinfo(int);
++int setreadonly(int);
+ 
+ // ulib.c
+ int stat(const char*, struct stat*);

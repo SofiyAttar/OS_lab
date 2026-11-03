@@ -1,0 +1,116 @@
+--- a/kalloc.c
++++ b/kalloc.c
+@@ -21,6 +21,10 @@
+   struct spinlock lock;
+   int use_lock;
+   struct run *freelist;
++
++  // Assignment 10 Q1: Physical memory allocation statistics.
++  uint total_allocated;
++  uint total_freed;
+ } kmem;
+ 
+ // Initialization happens in two phases.
+@@ -31,8 +35,13 @@
+ void
+ kinit1(void *vstart, void *vend)
+ {
+-  initlock(&kmem.lock, "kmem");
++    initlock(&kmem.lock, "kmem");
+   kmem.use_lock = 0;
++
++  // Assignment 10 Q1: Initialize memory statistics.
++  kmem.total_allocated = 0;
++  kmem.total_freed = 0;
++
+   freerange(vstart, vend);
+ }
+ 
+@@ -40,9 +49,13 @@
+ kinit2(void *vstart, void *vend)
+ {
+   freerange(vstart, vend);
++
++  // Assignment 10 Q1: Reset counters after initializing free memory.
++  kmem.total_allocated = 0;
++  kmem.total_freed = 0;
++
+   kmem.use_lock = 1;
+ }
+-
+ void
+ freerange(void *vstart, void *vend)
+ {
+@@ -56,6 +69,8 @@
+ // which normally should have been returned by a
+ // call to kalloc().  (The exception is when
+ // initializing the allocator; see kinit above.)
++// Free the page of physical memory pointed at by v.
++// Assignment 10 Q1: Track the number of freed pages.
+ void
+ kfree(char *v)
+ {
+@@ -69,16 +84,23 @@
+ 
+   if(kmem.use_lock)
+     acquire(&kmem.lock);
++
+   r = (struct run*)v;
+   r->next = kmem.freelist;
+   kmem.freelist = r;
++
++  kmem.total_freed++;
++
+   if(kmem.use_lock)
+     release(&kmem.lock);
+ }
+-
+ // Allocate one 4096-byte page of physical memory.
+ // Returns a pointer that the kernel can use.
+ // Returns 0 if the memory cannot be allocated.
++// Allocate one 4096-byte page of physical memory.
++// Returns a pointer that the kernel can use.
++// Returns 0 if the memory cannot be allocated.
++// Assignment 10 Q1: Track the number of allocated pages.
+ char*
+ kalloc(void)
+ {
+@@ -86,11 +108,37 @@
+ 
+   if(kmem.use_lock)
+     acquire(&kmem.lock);
++
+   r = kmem.freelist;
+-  if(r)
++
++  if(r){
+     kmem.freelist = r->next;
++    kmem.total_allocated++;
++  }
++
+   if(kmem.use_lock)
+     release(&kmem.lock);
++
+   return (char*)r;
+ }
+ 
++// Assignment 10 Q1: Retrieve physical memory statistics.
++void
++getmemstats(uint *allocated, uint *freed, uint *available)
++{
++  struct run *r;
++  uint count = 0;
++
++  acquire(&kmem.lock);
++
++  *allocated = kmem.total_allocated;
++  *freed = kmem.total_freed;
++
++  // Count the pages currently present in the free list.
++  for(r = kmem.freelist; r; r = r->next)
++    count++;
++
++  *available = count;
++
++  release(&kmem.lock);
++}

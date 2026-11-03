@@ -1,0 +1,19 @@
+--- a/syscall.c
++++ b/syscall.c
+@@ -105,6 +105,8 @@
+ extern int sys_uptime(void);
+ // Assignment 10 Q1
+ extern int sys_memstats(void);
++// Assignment 10 Q2
++extern int sys_vtop(void);
+ 
+ static int (*syscalls[])(void) = {
+ [SYS_fork]    sys_fork,
+@@ -130,6 +132,7 @@
+ [SYS_close]   sys_close,
+ // Assignment 10 Q1
+ [SYS_memstats] sys_memstats,
++[SYS_vtop] sys_vtop,
+ };
+ 
+ void

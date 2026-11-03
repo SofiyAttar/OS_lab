@@ -1,0 +1,32 @@
+--- a/sysproc.c
++++ b/sysproc.c
+@@ -131,3 +131,29 @@
+ 
+   return (int)pa;
+ }
++
++// Assignment 10 Q3: Page information system call.
++int
++sys_pageinfo(void)
++{
++  int va;
++  struct proc *p = myproc();
++
++  if(argint(0, &va) < 0)
++    return -1;
++
++  return pageinfo(p->pgdir, (uint)va);
++}
++
++// Assignment 10 Q3: Set a page to read-only.
++int
++sys_setreadonly(void)
++{
++  int va;
++  struct proc *p = myproc();
++
++  if(argint(0, &va) < 0)
++    return -1;
++
++  return setreadonly(p->pgdir, (uint)va);
++}

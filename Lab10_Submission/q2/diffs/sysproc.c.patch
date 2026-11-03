@@ -1,0 +1,26 @@
+--- a/sysproc.c
++++ b/sysproc.c
+@@ -111,3 +111,23 @@
+ 
+   return 0;
+ }
++// Assignment 10 Q2: Virtual-to-physical address translation system call.
++int
++sys_vtop(void)
++{
++  int va;
++  uint pa;
++  struct proc *p = myproc();
++
++  if(argint(0, &va) < 0)
++    return -1;
++
++  // Translate the virtual address using the current process's page table.
++  pa = vtop(p->pgdir, (uint)va);
++
++  // Return -1 if the virtual address is invalid or unmapped.
++  if(pa == 0)
++    return -1;
++
++  return (int)pa;
++}

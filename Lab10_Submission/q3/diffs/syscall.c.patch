@@ -1,0 +1,21 @@
+--- a/syscall.c
++++ b/syscall.c
+@@ -107,6 +107,9 @@
+ extern int sys_memstats(void);
+ // Assignment 10 Q2
+ extern int sys_vtop(void);
++// Assignment 10 Q3
++extern int sys_pageinfo(void);
++extern int sys_setreadonly(void);
+ 
+ static int (*syscalls[])(void) = {
+ [SYS_fork]    sys_fork,
+@@ -133,6 +136,8 @@
+ // Assignment 10 Q1
+ [SYS_memstats] sys_memstats,
+ [SYS_vtop] sys_vtop,
++[SYS_pageinfo]    sys_pageinfo,
++[SYS_setreadonly] sys_setreadonly,
+ };
+ 
+ void

@@ -1,0 +1,20 @@
+--- a/defs.h
++++ b/defs.h
+@@ -68,6 +68,8 @@
+ void            kfree(char*);
+ void            kinit1(void*, void*);
+ void            kinit2(void*, void*);
++// Assignment 10 Q1: Memory statistics.
++void            getmemstats(uint*, uint*, uint*);
+ 
+ // kbd.c
+ void            kbdintr(void);
+@@ -155,6 +157,8 @@
+ int             fetchint(uint, int*);
+ int             fetchstr(uint, char**);
+ void            syscall(void);
++// Assignment 10 Q1: Memory statistics system call.
++int             sys_memstats(void);
+ 
+ // timer.c
+ void            timerinit(void);

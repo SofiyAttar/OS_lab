@@ -1,0 +1,8 @@
+--- a/syscall.h
++++ b/syscall.h
+@@ -22,3 +22,5 @@
+ #define SYS_close  21
+ // Assignment 10 Q1
+ #define SYS_memstats 22
++// Assignment 10 Q2
++#define SYS_vtop 23

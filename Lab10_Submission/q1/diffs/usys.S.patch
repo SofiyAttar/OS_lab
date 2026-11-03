@@ -1,0 +1,8 @@
+--- a/usys.S
++++ b/usys.S
+@@ -29,3 +29,5 @@
+ SYSCALL(sbrk)
+ SYSCALL(sleep)
+ SYSCALL(uptime)
++# Assignment 10 Q1
++SYSCALL(memstats)

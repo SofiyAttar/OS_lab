@@ -1,0 +1,28 @@
+--- a/sysproc.c
++++ b/sysproc.c
+@@ -89,3 +89,25 @@
+   release(&tickslock);
+   return xticks;
+ }
++
++// Assignment 10 Q1: Display physical memory statistics.
++int
++sys_memstats(void)
++{
++  uint allocated;
++  uint freed;
++  uint available;
++  uint current;
++
++  getmemstats(&allocated, &freed, &available);
++
++  current = allocated - freed;
++
++  cprintf("\nPhysical Memory Statistics:\n");
++  cprintf("Total allocated pages: %d\n", allocated);
++  cprintf("Total freed pages: %d\n", freed);
++  cprintf("Currently allocated pages: %d\n", current);
++  cprintf("Available physical memory pages: %d\n", available);
++
++  return 0;
++}

@@ -1,0 +1,9 @@
+--- a/syscall.h
++++ b/syscall.h
+@@ -24,3 +24,6 @@
+ #define SYS_memstats 22
+ // Assignment 10 Q2
+ #define SYS_vtop 23
++// Assignment 10 Q3
++#define SYS_pageinfo    24
++#define SYS_setreadonly 25

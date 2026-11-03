@@ -1,0 +1,55 @@
+--- a/vm.c
++++ b/vm.c
+@@ -407,6 +407,52 @@
+ 
+   return pa;
+ }
++// Assignment 10 Q3: Display page information.
++int
++pageinfo(pde_t *pgdir, uint va)
++{
++  pte_t *pte;
++
++  if(va >= KERNBASE)
++    return -1;
++
++  pte = walkpgdir(pgdir, (char*)va, 0);
++
++  if(pte == 0 || !(*pte & PTE_P))
++    return -1;
++
++  cprintf("\nPage Information:\n");
++  cprintf("Virtual address: 0x%x\n", va);
++  cprintf("Physical frame address: 0x%x\n", PTE_ADDR(*pte));
++  cprintf("P (Present): %d\n", (*pte & PTE_P) ? 1 : 0);
++  cprintf("W (Writable): %d\n", (*pte & PTE_W) ? 1 : 0);
++  cprintf("U (User): %d\n", (*pte & PTE_U) ? 1 : 0);
++
++  return 0;
++}
++
++// Assignment 10 Q3: Remove write permission from a page.
++int
++setreadonly(pde_t *pgdir, uint va)
++{
++  pte_t *pte;
++
++  if(va >= KERNBASE)
++    return -1;
++
++  pte = walkpgdir(pgdir, (char*)va, 0);
++
++  if(pte == 0 || !(*pte & PTE_P))
++    return -1;
++
++  *pte &= ~PTE_W;
++
++  // Invalidate the corresponding TLB entry.
++// Flush the TLB so the updated page permissions take effect.
++  lcr3(V2P(pgdir));
++
++  return 0;
++}
+ //PAGEBREAK!
+ // Blank page.
+ //PAGEBREAK!

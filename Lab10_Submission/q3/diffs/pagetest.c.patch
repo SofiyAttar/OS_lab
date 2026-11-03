@@ -1,0 +1,82 @@
+--- a/pagetest.c
++++ b/pagetest.c
+@@ -0,0 +1,79 @@
++
++#include "types.h"
++#include "stat.h"
++#include "user.h"
++
++#define PGSIZE 4096
++
++int
++main(void)
++{
++  char *mem;
++  int pid;
++
++  printf(1, "\n========== Q3: Page Table Management and Protection ==========\n");
++
++  // Allocate one page of memory.
++  mem = sbrk(PGSIZE);
++
++  if(mem == (char*)-1){
++    printf(1, "Memory allocation failed\n");
++    exit();
++  }
++
++  // Touch the page so that it is mapped.
++  mem[0] = 'A';
++
++  printf(1, "\n--- Test 1: Initial Page Information ---\n");
++  printf(1, "Setting up page at virtual address: 0x%x\n", (uint)mem);
++
++  if(pageinfo((int)mem) < 0){
++    printf(1, "Page information lookup failed\n");
++    exit();
++  }
++
++  // Remove write permission from the page.
++  printf(1, "\n--- Test 2: Set Page to Read-Only ---\n");
++
++  if(setreadonly((int)mem) < 0){
++    printf(1, "Failed to set page read-only\n");
++    exit();
++  }
++
++  printf(1, "Page successfully changed to read-only.\n");
++
++  // Display page information again to verify PTE_W is cleared.
++  printf(1, "\n--- Test 3: Verify Page Permissions ---\n");
++
++  if(pageinfo((int)mem) < 0){
++    printf(1, "Page information lookup failed\n");
++    exit();
++  }
++
++  // Attempt a write in a child process.
++  printf(1, "\n--- Test 4: Attempt Write to Read-Only Page ---\n");
++
++  pid = fork();
++
++  if(pid < 0){
++    printf(1, "Fork failed\n");
++    exit();
++  }
++
++  if(pid == 0){
++    printf(1, "Child attempting to write to protected page...\n");
++    mem[0] = 'B';
++
++    // This should not execute if protection works.
++    printf(1, "ERROR: Write unexpectedly succeeded!\n");
++    exit();
++  }
++
++  wait();
++
++  printf(1, "Parent survived the child's protected-page write attempt.\n");
++  printf(1, "\n========== Q3 Test Completed ==========\n");
++
++  exit();
++}
++
