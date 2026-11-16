@@ -1,0 +1,122 @@
+Script started on 2026-08-04 16:49:26+05:30 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="230" LINES="49"]
+]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./Lab1Q2.sh[7@chmod +x [C[C[C[C[C[C[C[C[C./myscript.sh 10000 5 2[5Pchmod +x Lab1Q2.sh[7P./[C[C[C[C[C[C[C[C[C[Kchmod +x myscript.sh
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ chmod +x myscript.sh[9P./Lab1Q2[C[C[C[7@chmod +x [C[C[C[C[C[C[C[C[C./myscript.sh 10000 5 2[3Pchmod +x myscript.sh./myscript.sh 10000 5 2[3Pchmod +x myscript.sh./myscript.sh 10000 5 2[K[K[K5 3[K2
+[?2004l]133;C\]666;vte.shell.preexec!\Simple Interest = 1000.00
+Total Amount = 11000.00
+]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./myscript.sh 10000 5 2[3Pchmod +x myscript.sh./myscript.sh 10000 5 2[K[K[K
+[?2004l]133;C\]666;vte.shell.preexec!\Usage: ./myscript.sh <Principal> <Rate> <Time>
+]666;vte.shell.postexec=1\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./myscript.sh 10000 5 2[3Pchmod +x myscript.sh./myscript.sh 10000 5 2[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kchmod +x myscript.sh[9P./Lab1Q2[C[C[C[7@chmod +x [C[C[C[C[C[C[C[C[C
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ chmod +x Lab1Q2.sh./myscript.sh 10000 [Kchmod +x myscript.sh[9P./Lab1Q2[C[C[C[7@chmod +x [C[C[C[C[C[C[C[C[C[7P./[C[C[C[C[C[C[C[C[C
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a year: 2024 4
+2024 is a Leap Year.
+Enter a number: 24
+24 is Even.
+24 is Positive.
+]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./Lab1Q2.sh
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a year: a2f4
+Invalid year.
+]666;vte.shell.postexec=1\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./Lab1Q2.sh
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a year: 2026
+2026 is NOT a Leap Year.
+Enter a number: s2e
+Invalid number.
+]666;vte.shell.postexec=1\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./Lab1Q2.sh[7@chmod +x [C[C[C[C[C[C[C[C[C
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ chmod +x Lab1Q2.sh[7P./[C[C[C[C[C[C[C[C[C
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a year: 2024
+Invalid year.
+]666;vte.shell.postexec=1\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./Lab1Q2.sh[7@chmod +x [C[C[C[C[C[C[C[C[C
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ chmod +x Lab1Q2.sh[7P./[C[C[C[C[C[C[C[C[C
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a year: 2024
+2024 is a Leap Year.
+Enter a number: -24
+-24 is Even.
+-24 is Negative.
+]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./Lab1Q2.sh[7@chmod +x [C[C[C[C[C[C[C[C[C[7P./[C[C[C[C[C[C[C[C[C[7@chmod +x [C[C[C[C[C[C[C[C[C[7P./[C[C[C[C[C[C[C[C[C[7@chmod +x [C[C[C[C[C[C[C[C[C[7P./[C[C[C[C[C[C[C[C[C[7@chmod +x [C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K./Lab1Q2.sh[7@chmod +x [C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[C[1P[1P[1@f[1@i[1@b[1@a[1@n[1@d[1@s[1@t[1@a[1@r
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ chmod +x fibandstar.sh[11P./Lab1Q2[C[C[C[1P[1P[1P[1P[1P[1P[1@f[1@i[1@b[1@a[1@n[1@d[1@s[1@t[1@a[1@r
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a number:10
+./fibandstar.sh: line 5: [[10: command not found
+Enter a valid number
+]666;vte.shell.postexec=1\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./fibandstar.sh[7@chmod +x [C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ chmod +x fibandstar.sh[7P./[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a number: 10
+Fibonacci series
+0112358132134
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * * * 
+* * * * * * * 
+* * * * * * * * 
+* * * * * * * * * 
+* * * * * * * * * * 
+]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./fibandstar.sh[7@chmod +x [C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ chmod +x fibandstar.sh[7P./[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a number: ^[[A    10
+Fibonacci series
+0 1 1 2 3 5 8 13 21 34 
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * * * 
+* * * * * * * 
+* * * * * * * * 
+* * * * * * * * * 
+* * * * * * * * * * 
+]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ S[K./fibandstar.sh[7@chmod +x [C[C[C[C[C[C[C[C[C[C[C[C[C[7P./[C[C[C[C[C[C[C[C[C[C[C[C[C[7@chmod +x [C[C[C[C[C[C[C[C[C[C[C[C[C[7P./[C[C[C[C[C[C[C[C[C[C[C[C[C[7@chmod +x [C[C[C[C[C[C[C[C[C[C[C[C[C[11P./Lab1Q2[C[C[C[K./Lab1Q2.sh[K./Lab1Q2.sh[11@chmod +x fibandstar[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@s[1@i
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ chmod +x si.sh[1@./fibandstar[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@s[1@i
+[?2004l]133;C\]666;vte.shell.preexec!\Usage: ./si.sh <Principal> <Rate> <Time>
+]666;vte.shell.postexec=1\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./si.sh 10000 5 2
+[?2004l]133;C\]666;vte.shell.preexec!\Simple Interest = 1000.00
+Total Amount = 11000.00
+]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ 1[K./si.sh 10000 5 2[K 10000 5 2[K[K[K
+[?2004l]133;C\]666;vte.shell.preexec!\Usage: ./si.sh <Principal> <Rate> <Time>
+]666;vte.shell.postexec=1\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./si.sh 10000 5 2[K[7@chmod +x [C[C[C[C[C[1@./fibandstar[C[C[C[1Pchmod +x si[C[C[C[1P[1P[1P[1@ [1@l[1@e[1@a[1@p[1@a[1@n[1@d[1@ [1@n[1@u[1@m[1P[1P[1P[1P[1@n[1@u[1@m[1@b[1@e[1@r
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ chmod +x leapandnumber.sh[11P./si.sh 10000 [K[K[K[K[K[K[K[K[K[K[K[Kleapandnumber.sh
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a year: 2024
+2024 is a Leap Year.
+Enter a number: -24
+-24 is Even.
+-24 is Negative.
+]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./leapandnumber.sh
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a year: dufs2
+Invalid year.
+]666;vte.shell.postexec=1\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./leapandnumber.sh
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a year: 2026
+2026 is NOT a Leap Year.
+Enter a number: ddddddd3
+Invalid number.
+]666;vte.shell.postexec=1\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ S[K./leapandnumber.sh[7@chmod +x [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@p[1@r[1@i[1@m[1@e[1@_[1@p[1@a[1@l[1@i[1@n[1@d[1@r[1@o[1@m[1@e
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ chmod +x prime_palindrome.sh[10P./leapandnumber[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@p[1@r[1@i[1@m[1@e[1@_[1@a[1P[1@p[1@a[1@l[1@i[1@n[1@d[1@r[1@o[1@m[1@e
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a string or number: 131
+131 is Palindrome.
+131 is a Prime Number.
+]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./prime_palindrome.sh
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a string or number: aba
+aba is Palindrome.
+Not a valid number to find if it is prime.
+]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ ./prime_palindrome.sh
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a string or number: 71
+71 is NOT Palindrome.
+71 is a Prime Number.
+]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ S[K./prime_palindrome.sh
+[?2004l]133;C\]666;vte.shell.preexec!\Enter a string or number: 121
+121 is Palindrome.
+121 is NOT a Prime Number.
+]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ S[Khistroy[K[K[Kory>histort[Ky.txt
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ [7m([27m
+[7mdate[27m
+[7muname -a[27m
+[7mwhoami[27m
+[7m) > system_check.txt[27m[A[A[A[A]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ (
+date
+uname -a
+whoami
+) > system_check.txt
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://sofiya-VirtualBox/home/sofiya/Desktop/Lab1\]0;sofiya@sofiya-VirtualBox:~/Desktop/Lab1\]666;vte.shell.precmd!\[?2004h]0;sofiya@sofiya-VirtualBox: ~/Desktop/Lab1[01;32msofiya@sofiya-VirtualBox[00m:[01;34m~/Desktop/Lab1[00m$ exit
+[?2004l]133;C\]666;vte.shell.preexec!\exit
+
+Script done on 2026-08-04 17:48:44+05:30 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,47 @@
+    1  sudo apt update && sudo apt upgrade -y
+    2  sudo apt install gcc make cmake git curl perl \> wget build-essential dkms fastfetch htop duf linux-headers-generic
+    3  sudo apt install gcc make cmake git curl perl  wget build-essential dkms fastfetch htop duf linux-headers-generic
+    4  ls -lah
+    5  sudo chmod 777 VBoxLinuxAdditions.run
+    6  ls -lah
+    7  sudo ./VBoxLinuxAdditions.run
+    8  fastfetch
+    9  sudo usermod -aG vboxsf $USER
+   10  sudo reboot now
+   11  cat /etc/shells
+   12  [200~nano myscript.sh
+   13  nano myscript.sh
+   14  chmod +x myscript.sh
+   15  ./si.sh 10000 5 2
+   16  chmod +x myscript.sh
+   17  ./si.sh 10000 5 2
+   18  chmod +x myscript.sh
+   19  script -a session_log.txt
+   20  chmod +x myscript.sh
+   21  ./myscript.sh 10000 5 2
+   22  chmod +x Lab1Q2.sh
+   23  ./Lab1Q2.sh
+   24  chmod +x myscript.sh
+   25* 
+   26  ./myscript.sh 10000 
+   27  chmod +x Lab1Q2.sh
+   28  ./Lab1Q2.sh
+   29  chmod +x Lab1Q2.sh
+   30  ./Lab1Q2.sh
+   31* 
+   32  ./Lab1Q2.sh
+   33  chmod +x fibandstar.sh
+   34  ./fibandstar.sh
+   35  chmod +x fibandstar.sh
+   36  ./fibandstar.sh
+   37  chmod +x fibandstar.sh
+   38  ./fibandstar.sh
+   39  chmod +x si.sh
+   40  ./si.sh
+   41  ./si.sh 10000 5 2
+   42  ./si.sh 10000 
+   43  chmod +x leapandnumber.sh
+   44  ./leapandnumber.sh
+   45  chmod +x prime_palindrome.sh
+   46  ./prime_palindrome.sh
+   47  history>history.txt
